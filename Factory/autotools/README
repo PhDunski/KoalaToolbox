@@ -1,0 +1,159 @@
+Ce projet a été lancé suite à une discussion sur le forum dans laquelle on m'a 
+proposé de placer mon code en téléchargement. Vous pourrez retrouver cette
+discussion d'origine à l'adresse
+http://www.developpez.net/forums/d1400955/c-cpp/cpp/communaute/contribuez/telechargez/object-factory/
+
+Il apporte néanmoins une évolution majeur par rapport au code d'origine dans le
+sens où les fichiers que vous venez de télécharger permettent une plus grande
+flexibilité au niveau des types concrets créés et de la fabrique utilisée.
+
+Le projet est subdivisé en deux dossiers majeurs :
+ * le dossier Core qui contient exclusivement les fichiers nécessaire à l'objectif
+   du projet, à savoir fournir un système évolutif susceptible de créer des objets
+   issus d'une hiérarchie de classes en leur fournissant une liste de paramètres
+   clairement définie
+ * le dossier Test qui fournit "tout ce qu'il faut" pour effectuer un test des
+   classes templates définies dans le dossier Core.
+
+Afin de permettre à l'utilisateur de compiler ce projet au gré de ses propres 
+habitudes, plusieurs possibilités de compilation ont été générées. Chacune de 
+ces possibilités se trouve dans un dossier clairement identifié.
+
+
+PREREQUIS
+=========
+Pour être en mesure de compiler correctement ce projet, vous devez disposer d'un
+ compilateur supportant la norme C++11.
+
+Parmi les principales possibilité de C++11 qui sont nécessaires, il faut que votre compilateur
+supporte :
+    * la directive using en remplacement du mot clé typedef
+
+A l'heure actuelle, la compilation du projet a été testée avec les compilateurs suivants :
+
+    * gcc-4.8 ou ultérieure
+    * clang-4.5 ou ultérieure
+
+D'autres compilateurs sont suceptibles de fournir l'exécutable, mais n'ont a ce jour pas été
+testés.  N'hésitez pas à nous faire part de la réussite ou de l'échec de la compilation avec
+d'autres compilateurs.
+
+Un EDI ou un système d'automatisation de la compilation.
+
+A l'heure actuelle, les possibilités suivantes vous sont offertes:
+    * Uitliser l'EDI gratuit Code::blocks, disponible sur le site ( http://http://www.codeblocks.org )
+    * un système "unixoïde" capable d'exécuter le script configure
+    * Utiliser cmake pour générer un Makefile. 
+
+Sous linux, vous pouvez vous reporter à votre gestionnaire de paquetages pour vous procurer les outils
+adéquats.
+
+UTILISATION DE CODE::BLOCKS
+===========================
+Les fichiers de projet de Code::blocks se trouvent dans le dossier Code::Blocks.
+
+Si l'extension *.cbp est associée avec Code::blocks, double cliquez simplement sur le
+fichier <dossier racine>/FactoryTest.cbp.
+
+Si ce n'est pas le cas, lancez Code::Blocks, cliquez sur le lien "Open an existing project" de la page
+d'accueil, naviguez dans l'arborescence du projet jusqu'au dossier dossier rassine
+et choisissez le fichier FactoryTest2.cbp
+
+UTILISATION DE CMAKE
+====================
+
+Vous pouvez utiliser CMake ( http://cmake.org ) pour générer le Makefile vous permettant de compiler
+ce projet.
+
+Le fichier cmake/CMakeLists.txt requière cmake-2.8 ou ultérieur, car c'est la version que j'ai utilisée.
+
+Des versions antérieures peuvent néanmoins fonctionner. N'hésitez pas à me contacter pour signaler les versions
+antérieures susceptibles de fonctionner.
+
+Pour ce faire, créez un dossier (build) au même niveau que le dossier racine du projet et entrez dans
+ce dossier.
+
+Cela se fait classiquement en mode console avec la commande
+
+$ mkdir build && cd build
+
+exécutez cmake en précisant la forme de Makefile à générer avec la commande
+
+$ cmake -G "< forme de Makefile>" ../FactoryTest/cmake
+
+où < forme de Makefile> correspond à la forme de Makefile que vous souhaitez (reportez vous
+au résultat de la commande cmake --help pour choisir celui qui convient)
+
+Générez l'exécutable à l'aide de la commande
+
+$ make
+
+L'exécutable ( factorytest(.exe) ) se trouvera dans le dossier build.
+
+A l'heure actuelle, il est préférable de ne pas installer l'exécutable étant donné
+les spécifications propres au projet, mais vous pouvez lancer directement l'exécutable
+au travers de la commande 
+
+$ ./echec
+
+UTILISATION DU SCRIPT CONFIGURE
+===============================
+Si vous disposez d'une système linux-like, vous pouvez utiliser le script de configuration se trouvant
+dans le dossier <dossier racine>/autotools pour configurer le projet.
+
+Il est, comme toujours, conseillé d'effectuer la compilation dans un dossier séparé.
+
+Créez un répertoir (build?) au même niveau que le dossier racine du projet et entrez dans ce dossier.
+
+Cela se fait classiquement en mode console avec la commande
+
+$ mkdir build && cd build
+
+Lancez le script de configuration avec la commande
+
+$ ../FactoryTest/autotools/configure
+
+Aucune option n'est a priori nécessaire, le script de configuration s'occupe de tout
+
+Lancez la compilation en exécutant la commande
+
+$ make
+
+L'exécutable ( factorytest(.exe) ) se trouvera dans le dossier build.
+
+A l'heure actuelle, il est préférable de ne pas installer l'exécutable étant donné
+les spécifications propres au projet, mais vous pouvez lancer directement l'exécutable
+au travers de la commande 
+
+$ ./echec
+
+TOUT AUTRE SYSTEME
+==================
+
+Vous êtes bien entendu tout à fait libre d'utiliser n'importe quel autre système à votre
+gout.
+
+Vous devez alors le configurer pour que les sources soient recherchées dans le dossier Echec2/src
+et pour que les fichiers d'en-tête soient recherchés dans le dossier Echec2/include.
+
+Vous devrez en outre spécifier l'option permettant d'activer le support de la norme C++11 de votre
+compilateur si cette norme n'est pas utilisée par défaut.
+
+GENERATION DE LA DOCUMENTATION
+==============================
+Toutes les classes et fonctions disposent d'un cartouche au format doxygen afin de permettre
+la génération automatique de documentation.
+
+Si vous souhaitez profiter de cette documentation, nous vous conseillons le recours à 
+l'outil doxygen ( http://www.doxygen.org ) et le cas échéant à l'outil de génération de graphes
+graphviz ( http://www.graphviz.org ).
+
+Ces deux outils sont disponibles sur la plupart des distributions linux ainsi que pour windows.
+
+Sous linux, utilisez votre gestionnaire de paquets pour les installer en cas de besoin.
+
+NOTA : aucun script de configuration ne prépare la génération automatique de la documentation,
+et aucun fichier de configuration de celle-ci (doxyfile) n'est fourni avec le projet.
+
+Il vous appartient donc de créer la configuration qui vous convient le mieux pour générer la 
+documentation.

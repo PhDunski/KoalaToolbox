@@ -1,0 +1,7 @@
+cmake_minimum_required (VERSION 2.8)
+project (factorytest CXX)
+SET(CMAKE_CXX_FLAGS "-std=c++11")
+INCLUDE_DIRECTORIES ("${PROJECT_SOURCE_DIR}/../Core/include")
+INCLUDE_DIRECTORIES ("${PROJECT_SOURCE_DIR}/../Test/include")
+file(GLOB_RECURSE SRC_FILES ${PROJECT_SOURCE_DIR}/../Test/src/*.cpp)
+add_executable(factorytest ${SRC_FILES})
