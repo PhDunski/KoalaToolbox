@@ -22,11 +22,9 @@ ces possibilités se trouve dans un dossier clairement identifié.
 
 PREREQUIS
 =========
-Pour être en mesure de compiler correctement ce projet, vous devez disposer d'un
- compilateur supportant la norme C++11.
+Pour être en mesure de compiler correctement ce projet, vous devez disposer d'un compilateur supportant la norme C++11.
 
-Parmi les principales possibilité de C++11 qui sont nécessaires, il faut que votre compilateur
-supporte :
+Parmi les principales possibilité de C++11 qui sont nécessaires, il faut que votre compilateur supporte :
     * la directive using en remplacement du mot clé typedef
 
 A l'heure actuelle, la compilation du projet a été testée avec les compilateurs suivants :
@@ -34,8 +32,7 @@ A l'heure actuelle, la compilation du projet a été testée avec les compilateu
     * gcc-4.8 ou ultérieure
     * clang-4.5 ou ultérieure
 
-D'autres compilateurs sont suceptibles de fournir l'exécutable, mais n'ont a ce jour pas été
-testés.  N'hésitez pas à nous faire part de la réussite ou de l'échec de la compilation avec
+D'autres compilateurs sont suceptibles de fournir l'exécutable, mais n'ont a ce jour pas été testés.  N'hésitez pas à nous faire part de la réussite ou de l'échec de la compilation avec
 d'autres compilateurs.
 
 Un EDI ou un système d'automatisation de la compilation.
@@ -45,8 +42,7 @@ A l'heure actuelle, les possibilités suivantes vous sont offertes:
     * un système "unixoïde" capable d'exécuter le script configure
     * Utiliser cmake pour générer un Makefile. 
 
-Sous linux, vous pouvez vous reporter à votre gestionnaire de paquetages pour vous procurer les outils
-adéquats.
+Sous linux, vous pouvez vous reporter à votre gestionnaire de paquetages pour vous procurer les outils adéquats.
 
 UTILISATION DE CODE::BLOCKS
 ===========================
@@ -70,8 +66,7 @@ Le fichier cmake/CMakeLists.txt requière cmake-2.8 ou ultérieur, car c'est la 
 Des versions antérieures peuvent néanmoins fonctionner. N'hésitez pas à me contacter pour signaler les versions
 antérieures susceptibles de fonctionner.
 
-Pour ce faire, créez un dossier (build) au même niveau que le dossier racine du projet et entrez dans
-ce dossier.
+Pour ce faire, créez un dossier (build) au même niveau que le dossier racine du projet et entrez dans ce dossier.
 
 Cela se fait classiquement en mode console avec la commande
 
@@ -81,8 +76,7 @@ exécutez cmake en précisant la forme de Makefile à générer avec la commande
 
 $ cmake -G "< forme de Makefile>" ../Factory/cmake
 
-où < forme de Makefile> correspond à la forme de Makefile que vous souhaitez (reportez vous
-au résultat de la commande cmake --help pour choisir celui qui convient)
+où < forme de Makefile> correspond à la forme de Makefile que vous souhaitez (reportez vous au résultat de la commande cmake --help pour choisir celui qui convient)
 
 Générez l'exécutable à l'aide de la commande
 
@@ -90,9 +84,7 @@ $ make
 
 L'exécutable ( factorytest(.exe) ) se trouvera dans le dossier build.
 
-A l'heure actuelle, il est préférable de ne pas installer l'exécutable étant donné
-les spécifications propres au projet, mais vous pouvez lancer directement l'exécutable
-au travers de la commande 
+A l'heure actuelle, il est préférable de ne pas installer l'exécutable étant donné les spécifications propres au projet, mais vous pouvez lancer directement l'exécutable au travers de la commande 
 
 $ ./factorytest
 
@@ -134,7 +126,7 @@ Vous êtes bien entendu tout à fait libre d'utiliser n'importe quel autre syst�
 gout.
 
 Vous devez alors le configurer pour que les sources soient recherchées dans le dossier Echec2/src
-et pour que les fichiers d'en-tête soient recherchés dans le dossier Echec2/include.
+et pour que les fichiers d'en-tête soient recherchés dans le dossier Factory/include.
 
 Vous devrez en outre spécifier l'option permettant d'activer le support de la norme C++11 de votre
 compilateur si cette norme n'est pas utilisée par défaut.
