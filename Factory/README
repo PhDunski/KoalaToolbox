@@ -3,12 +3,12 @@ proposé de placer mon code en téléchargement. Vous pourrez retrouver cette
 discussion d'origine à l'adresse
 http://www.developpez.net/forums/d1400955/c-cpp/cpp/communaute/contribuez/telechargez/object-factory/
 
-Il apporte néanmoins une évolution majeur par rapport au code d'origine dans le
+Il apporte néanmoins une évolution majeure par rapport au code d'origine dans le
 sens où les fichiers que vous venez de télécharger permettent une plus grande
 flexibilité au niveau des types concrets créés et de la fabrique utilisée.
 
 Le projet est subdivisé en deux dossiers majeurs :
- * le dossier Core qui contient exclusivement les fichiers nécessaire à l'objectif
+ * le dossier Core qui contient exclusivement les fichiers nécessaires à l'objectif
    du projet, à savoir fournir un système évolutif susceptible de créer des objets
    issus d'une hiérarchie de classes en leur fournissant une liste de paramètres
    clairement définie
