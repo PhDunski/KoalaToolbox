@@ -8,23 +8,23 @@
   * @version 1.0
   * @date 2013/12/15
   */
-#ifndef DERIVEE1_H
-#define DERIVEE1_H
+#ifndef FACTORY_EXAMPLE_DERIVEE1_HPP_INCLUDED
+#define FACTORY_EXAMPLE_DERIVEE1_HPP_INCLUDED
 
-#include <Base.h>
-#include <ParameterLists.h>
+#include <Base.hpp>
+#include <Color.hpp>
 
 class Derivee1 : public Base
 {
     public:
-        Derivee1(IntOnlyParam const & pl) : i(std::get<0>(pl)){}
-        Derivee1(IntAndColorParam const & pl) : i(std::get<0>(pl)),
-                                           color(std::get<1>(pl)){}
-        void print() const;
+        Derivee1(int i) :Derivee1{i, Color{}}{}
+        Derivee1(int i, Color const & c) : i_{i},
+                                           color_{c}{}
+        void print() const final override;
     protected:
     private:
-        int i;
-        Color color;
+        int i_;
+        Color color_;
 };
 
-#endif // DERIVEE1_H
+#endif // FACTORY_EXAMPLE_DERIVEE1_HPP_INCLUDED

@@ -6,34 +6,26 @@
   * @version 1.0
   * @date 2013/12/15
   */
-#include <Base.h>
-#include <ParameterLists.h>
-#include <Factory.h>
-#include <DerivedAliases.h>
+#include <Derivee1.hpp>
+#include <Derivee2.hpp>
+#include <Color.hpp>
+#include <Factory.hpp>
+#include <memory>
 using namespace std;
-
 int main()
 {
+    using ptr_t = std::unique_ptr<Base>;
     /* Créons quelques listes de paramètres à transmettre aux différent constructeurs */
-    IntOnlyParam paramOneInt(55);
-    IntAndColorParam paramIntAndColor(12, Color(5,5,5));
-    StringOnlyParam paramOneString("hello");
-    StringAndColorParam paramStringAndColor("world", Color(10,10,10));
-    Factory factory;
+    Ktb::Tools::Factory<Base> factory;
     /* Construisons un objet de chaque type */
-    Base * ptr_1 = factory.create(Derivee1ListOnlyInt(paramOneInt));
-    Base * ptr_2 = factory.create(Derivee1ListIntAndColor(paramIntAndColor));
-    Base * ptr_3 = factory.create(Derivee1ListOnlyString(paramOneString));
-    Base * ptr_4 = factory.create(Derivee1ListStringAndColor(paramStringAndColor));
+    ptr_t ptr_1{factory.template create<Derivee1>(12)};
+    ptr_t ptr_2{factory.template create<Derivee1>(12, Color{0x00,0x44,0x66})};
+    ptr_t ptr_3{factory.template create<Derivee2>("salut")};
+    ptr_t ptr_4{factory.template create<Derivee2>("hello", Color{0x00,0x44,0x66})};
     /* affichons le tout pour nous assurer que cela fonctionne */
-    ptr_1->print();
-    ptr_2->print();
-    ptr_3->print();
-    ptr_4->print();
-    /* et faisons le ménage */
-    delete ptr_1;
-    delete ptr_2;
-    delete ptr_3;
-    delete ptr_4;
+    ptr_1.get()->print();
+    ptr_2.get()->print();
+    ptr_3.get()->print();
+    ptr_4.get()->print();
     return 0;
 }

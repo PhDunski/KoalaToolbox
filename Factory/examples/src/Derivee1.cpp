@@ -8,10 +8,10 @@
   * @version 1.0
   * @date 2013/12/15
   */
-#include "Derivee1.h"
+#include <Derivee1.hpp>
 #include <iostream>
 void Derivee1::print() const{
     std::cout<<"Derivee1 :"
-             <<" i = "<< i
-             <<" color : "<<color<<std::endl;
+             <<" i = "<< i_
+             <<" color : "<<color_<<std::endl;
 }

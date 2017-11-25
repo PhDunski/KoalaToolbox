@@ -8,10 +8,10 @@
   * @version 1.0
   * @date 2013/12/15
   */
-#include "Derivee2.h"
+#include <Derivee2.hpp>
 #include <iostream>
 void Derivee2::print() const{
-    std::cout<<"Derivee1 :"
-             <<" str = "<< str
-             <<" color : "<<color<<std::endl;
+    std::cout<<"Derivee2 :"
+             <<" str = "<< str_
+             <<" color : "<<color_<<std::endl;
 }

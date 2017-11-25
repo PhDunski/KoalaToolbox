@@ -9,7 +9,7 @@
   * @version 1.0
   * @date 2013/12/15
   */
-#include <Color.h>
+#include <Color.hpp>
 #include <iostream>
 std::ostream & operator<<(std::ostream & os, Color const & color){
     os<<"red = "<<color.red

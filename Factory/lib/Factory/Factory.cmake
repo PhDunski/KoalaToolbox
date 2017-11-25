@@ -1,0 +1,7 @@
+set(FACTORY_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/include CACHE PATH "Where to find the Factory headers")
+set(HEADERS Factory )
+foreach(h ${HEADERS})
+    list(APPEND KTB_HEADERS ${FACTORY_INCLUDE_DIRS}/${h}.hpp)
+endforeach()
+set(KTB_HEADERS ${KTB_HEADERS} PARENT_SCOPE)
+set(KTB_SRCS ${KTB_SRCS} PARENT_SCOPE)

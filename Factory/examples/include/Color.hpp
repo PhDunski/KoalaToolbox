@@ -9,8 +9,8 @@
   * @version 1.0
   * @date 2013/12/15
   */
-#ifndef COLOR_H_INCLUDED
-#define COLOR_H_INCLUDED
+#ifndef FACTORY_EXAMPLE_COLOR_HPP_INCLUDED
+#define FACTORY_EXAMPLE_COLOR_HPP_INCLUDED
 #include <iosfwd>
 struct Color{
     Color():red(0),green(0),blue(0){}
@@ -22,4 +22,4 @@ struct Color{
 };
 std::ostream & operator<<(std::ostream & os, Color const & color);
 
-#endif // COLOR_H_INCLUDED
+#endif // FACTORY_EXAMPLE_COLOR_HPP_INCLUDED
