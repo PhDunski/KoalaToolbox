@@ -1,0 +1,13 @@
+Note, a basic full random partition generator
+=============================================
+This is a very symple project developped to help someone on a forum.
+
+those person needs some help to get randomly generated sequences of 
+(musical) notes according to some rules.
+
+Developing this project, my aims was to give him a POC for a simple 
+class which provid correct services and a (really simple) application
+as example.
+
+I'm not sure that this project may be usable for anyone else the person on
+the forum, but, here is it.
