@@ -1,0 +1,1 @@
+Signals : A simple, easy to use signal / slot library
