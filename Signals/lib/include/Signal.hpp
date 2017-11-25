@@ -1,6 +1,8 @@
-#ifndef SIGNALS_SIGNAL_HPP_INCLUDED
-#define SIGNALS_SIGNAL_HPP_INCLUDED
-namespace Signals{
+#ifndef KTB_TOOLS_SIGNAL_HPP_INCLUDED
+#define KTB_TOOLS_SIGNAL_HPP_INCLUDED
+namespace Ktb{
+
+namespace Tools{
 template <typename ... Args>
 class Signal;
 namespace Details{
@@ -144,5 +146,6 @@ private:
 	mutable bool blocked_{false};
 	mutable std::hashmap<size_t, ConnInfo> allConns_;
 };
-}
-# endif
+} // namespace Tools
+} // namespace Ktb
+# endif // KTB_TOOLS_SIGNAL_HPP_INCLUDED
