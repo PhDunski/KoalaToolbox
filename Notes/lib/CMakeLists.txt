@@ -19,4 +19,4 @@ target_include_directories(noteLib PUBLIC $<BUILD_INTERFACE:${NOTE_INCLUDE_DIRS}
 )
 install(TARGETS noteLib
     ARCHIVE DESTINATION lib)
-install(FILES ${HEADERS} DESTINATION include/note)
+install(FILES  ${KTB_HEADERS}  DESTINATION include/${PROJECT_NAME})
