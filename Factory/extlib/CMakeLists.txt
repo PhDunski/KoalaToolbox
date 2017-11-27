@@ -1,6 +1,7 @@
 
 find_package(Catch REQUIRED)
 option(BUILD_TESTS "Should we build the test suite?" true)
+option(BUILD_DOC_CATCH "Should we build the Catch documentation?" false)
 add_library(Catch INTERFACE)
 target_include_directories(Catch INTERFACE ${CATCH_INCLUDE_DIRS})
 include_directories(${CATCH_INCLUDE_DIRS})
