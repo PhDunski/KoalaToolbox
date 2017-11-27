@@ -3,7 +3,7 @@ if(NOT DESCRIPTION)
     message(WARNING "please set the DESCRIPTION variable in the sub-project's root CMakeLists.txt")
 endif()
 string(TOUPPER ${PROJECT_NAME} upName)
-if(BUILD_DOCS)
+if(DOCS_BUILD)
     #some tuning to complies with Doxyfile syntax
     option(DOCS_BUILD_HTML "Should we build the documentation in HTML format" ON)
     option(DOCS_BUILD_LATEX "Should we build the documentation in LATEX format" OFF)
