@@ -1,9 +1,0 @@
-
-find_package(Catch REQUIRED)
-option(BUILD_TESTS "Should we build the test suite?" true)
-add_library(Catch INTERFACE)
-target_include_directories(Catch INTERFACE ${CATCH_INCLUDE_DIRS})
-include_directories(${CATCH_INCLUDE_DIRS})
-if(BUILD_TESTS)
-    enable_testing()
-endif()

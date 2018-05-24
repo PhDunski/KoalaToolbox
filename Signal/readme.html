@@ -1,0 +1,115 @@
+<h1>Signals : A simple, easy to use signal / slot library</h1>
+
+<p>An easy to use, header only, one file signal slot library.</p>
+
+<h2>License</h2>
+
+<p>This project is providen under the terms of the MIT license,
+you should have received a copy of this license</p>
+
+<p>Pleas see te Copyright.txt file for more information about this.</p>
+
+<h2>(1) Requirements</h2>
+
+<p>The absolute minimum requirement is to use a C++14 (C++17 is best) compliant
+compiler if you consider to simply copy the <code>Signal.hpp</code> in your own
+project's include directory</p>
+
+<p>In addition, if you may have to use CMake (version >= 3.8 ) and Doxygen 
+(version >= 1.8.13) for specific uses.</p>
+
+<h2>Used and tested tools</h2>
+
+<p>This project is developped on a basic -- but up to date -- debian <em>testing</em> (codename <strong>buster</strong>) distribution </p>
+
+<p>In addition some tests have been done using a window 10 (64 bits) insallation.</p>
+
+<h3>Tested compilers</h3>
+
+<p>On this day, the project has correctly been build and passed unit tests with: </p>
+
+<pre><code>Gcc 7.3.0 (debian)
+Gcc 8.1.0 (debian)
+clang 6.0 (debian)
+MinGW  (windows)
+VisualStudio 2015 (windows)
+</code></pre>
+
+<h3>No mandatory tools</h3>
+
+<p>Those tools have been tested in the mean time:</p>
+
+<pre><code>CMake 3.11.1 (debian)
+doxygen 1.8.13 (debian)
+</code></pre>
+
+<blockquote>
+  <p><strong>Note :</strong> If you are able to compiling and passing unit tests on diferent
+architectures, with different compilers or with different tools versions,
+feel free add let me know it.  I'll be glad to add the information here.</p>
+</blockquote>
+
+<h2>(2) How to Use?</h2>
+
+<ul>
+<li>Just put the <code>Signal.hpp</code> in a directory known by the compiler to
+hold header files and ensure that it is part of your project.</li>
+<li>If you considere to generate documentation or to use the unit tests policy,
+please refer to the <a href="#5">Using Cmake section</a></li>
+</ul>
+
+<h2>(3) Directory structure</h2>
+
+<p>If we consider that <code>&lt;root_dir&gt;</code> correspond here to my toolbox/Signal subdirecty,
+here his the structure of this directory</p>
+
+<p>```</p>
+
+<pre><code>    &lt;root_dir&gt;                     // main library root directory
+        |-&gt; 3rdParty               // contains some 3rd party external libraries 
+        |                          // (mainely CATCH, which is used for unit test policy)
+        |-&gt; doxygen                // contains doxygen documentation generator related files
+        |    |-&gt; examples          // contains some (compilable) *.cpp files used exclusively
+        |                          // by doxygen to generate examples
+        |-&gt; lib                    // contains the library source code
+        |    |-&gt; Tools             // as possiblely part of a more general use (Tools) library
+        |        |                 // all Signal source files will live in its general use library directory
+        |        |-&gt;include        // contains all header files (only Signal.hpp for this project)
+        |-&gt; tests                  // Contains files required for the unit test policy
+        |    |-&gt;Tools              // As part as a more general use (Tools)library, 
+        |    |    |                // all Signal source files will live in its general use library directory
+        |    |    |-&gt; Signal       // all Signal unit tests related files are in them own subtree
+        |    |    |-&gt; include      // contains specifics headers required for testing Signal library
+        |    |    |-&gt; src          // contains specifics implementationf files for testing Signal library
+</code></pre>
+
+<p>```</p>
+
+<p>All "first level" (<code>&lt;root_dir&gt;</code>, <code>3rdParty</code>, <code>doxygen</code>, <code>lib</code> and <code>tests</code>)
+and all <code>Signal</code> subdirectory contains CMake related files making the <code>&lt;root_dir&gt;</code>
+usable as the perfect base to create a new project</p>
+
+<p>Different toolbox parts (like <code>Locator</code> subdirectory) will follow exactely the same
+directory structure (but for <code>tests/Tools/&lt;dirname&gt;</code>) and eatch CMake related file
+will has similar effects to allow you to use so many tools part as y need 
+to start a new project.</p>
+
+<h1>(4) Building and installing</h1>
+
+<p>The easiest way to build this project is to</p>
+
+<pre><code>1 using CMake to configure it see the [Using Cmake section](#5) for more informations
+2 using the `make` command fort building (if requested : only needed if unit tests are selected) the project 
+3 using the `make doc` command for generating documentation (if requested)
+4 (if wanted) going in the tests build dir and launching unit tests with the `ctest` command
+5 (if wanted) going back in the &lt;root_builddir&gt; and creating packages with the `cpack` command
+6 (if wanted) installing library files using the ` make install` command
+7 (if wanted) installing the documentation using the `make install doc` command
+</code></pre>
+
+<h2>(5) Using CMake</h2>
+
+<p>CMake is a great, effiscient tool helping to manage project configuration work.</p>
+
+<p>As far as it is (IMHO) very easyer and more portable than historical 
+<strong>autotools</strong> it is the configuration tool I choosed to use is  </p>

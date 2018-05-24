@@ -1,6 +1,0 @@
-if(BUILD_TESTS)
-	enable_testing()
-	option(BUILD_SIGNALS_TESTS "Should we build the signals test suite?" true)
-    if(BUILD_SIGNALS_TESTS)
-		add_subdirectory(Signals)
-    endif()
