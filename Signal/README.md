@@ -10,7 +10,8 @@ you should have received a copy of this license
 
 Pleas see te Copyright.txt file for more information about this.
 
-##(1) Requirements 
+<a id="1"></a>
+## Requirements 
 
 The absolute minimum requirement is to use a C++14 (C++17 is best) compliant
 compiler if you consider to simply copy the `Signal.hpp` in your own
@@ -19,12 +20,14 @@ project's include directory
 In addition, if you may have to use CMake (version >= 3.8 ) and Doxygen 
 (version >= 1.8.13) for specific uses.
 
+<a id="2"></a>
 ## Used and tested tools
 
 This project is developped on a basic -- but up to date -- debian *testing* (codename **buster**) distribution 
 
 In addition some tests have been done using a window 10 (64 bits) insallation.
 
+<a id="2.1"></a>
 ### Tested compilers
 On this day, the project has correctly been build and passed unit tests with: 
 
@@ -34,6 +37,7 @@ On this day, the project has correctly been build and passed unit tests with:
 	MinGW  (windows)
 	VisualStudio 2015 (windows)
 	
+<a id="2.2"></a>
 ### No mandatory tools
 
 Those tools have been tested in the mean time:
@@ -45,15 +49,16 @@ Those tools have been tested in the mean time:
 > architectures, with different compilers or with different tools versions,
 > feel free add let me know it.  I'll be glad to add the information here.
 
-
-##(2) How to Use? 
+<a id="3"></a>
+## How to Use? 
 
 - Just put the `Signal.hpp` in a directory known by the compiler to
 hold header files and ensure that it is part of your project.
 - If you considere to generate documentation or to use the unit tests policy,
  please refer to the [Using Cmake section](#5)
 
-##(3) Directory structure 
+<a id="4"></a>
+## Directory structure 
 If we consider that `<root_dir>` correspond here to my toolbox/Signal subdirecty,
 here his the structure of this directory
 
@@ -85,8 +90,8 @@ Different toolbox parts (like `Locator` subdirectory) will follow exactely the s
 directory structure (but for `tests/Tools/<dirname>`) and eatch CMake related file
 will has similar effects to allow you to use so many tools part as y need 
 to start a new project.
-
-#(4) Building and installing
+<a id="5"></a>
+# Building and installing
 The easiest way to build this project is to
 
 	1 using CMake to configure it see the [Using Cmake section](#5) for more informations
@@ -97,9 +102,7 @@ The easiest way to build this project is to
 	6 (if wanted) installing library files using the ` make install` command
 	7 (if wanted) installing the documentation using the `make install doc` command
 
-##(5) Using CMake 
+<a id="6"></a>
+## Using CMake 
 
 CMake is a great, effiscient tool helping to manage project configuration work.
-
-As far as it is (IMHO) very easyer and more portable than historical 
-**autotools** it is the configuration tool I choosed to use is  
