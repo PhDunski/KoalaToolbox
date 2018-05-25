@@ -1,5 +1,5 @@
 <a id="top"></a>
-Qu'est ce que cela changerait?
+#Qu'est ce que cela changerait?
 
 Bien sûr, si m'autorise à considérer certains aspects
 d'un langage créé par quelqu'un de très certainement
