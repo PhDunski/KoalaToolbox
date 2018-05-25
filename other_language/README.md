@@ -28,12 +28,6 @@ Parmi ceux-ci, je citerais :
 Ce projet a pour but dévaluer la faisabilité de créer un nouveau langage qui profiterait de l'expérience acquise
 grâce à C++ pour essayer d'en corriger les défauts les plus criants
 
-<a id="also"></a>
-## Voir aussi
-- [Description générale](description.md#top)
-- [Corrections et avantages](changes.md#top)
-- [Approfondire les modules](modules.md#top)
-
 <a id="why" ></a>
 ## Pourquoi un nouveau langage?
 
@@ -55,20 +49,11 @@ qu'il n'aurait pu l'être si il n'en avait pas souffert.
 
 Le but de ce projet est (d'essayer) de créer un langage qui aurait toute
 la puissance du C++ mais qui en résoudrait les problèmes les plus criants.
-<a id="changes" > </a>
-#
-## Ce qui ne changera pas
 
-Pour faire simple : rien de ce qui est sans rapport avec les points cité
-plus haut ne devrait fondamentalement changer.
-
-
-
+<a id="also"></a>
 ## Voir aussi
-
-- [la description de base](description.md#top)
-- [Ce qui devrait changer](changes.md#top)
-- [Les modules](modules.md#top)
+- [Description générale](description.md#top)
+- [Corrections et avantages](changes.md#top)
+- [La modularité](modules.md#top)
 - [les fonctionnalités du langage](functionalities.md#top)
-- [les mots clés du langage](keywords.md#top)
 - [La grammaire et la syntaxe](grammar.md#top)
