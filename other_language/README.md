@@ -177,9 +177,7 @@ CC foo.cpp main.cpp
 
 échouera à l'édition de liens sous prétexte d'une référence indéfinie vers "foo()".
 
-A mon sens, chacune des situations présentes mérite d'être désignée par
-un mot clé spécifique.
-
+A mon sens, chacune des situations présentes mérite d'être désignée par un mot clé spécifique.
 
 ### Différencier les sémantiques
 
