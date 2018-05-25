@@ -298,4 +298,6 @@ Si la notion de *byte* (un ensemble de N bits successifs en mémoire) pouvait
 être décorellée de la notion de caractères **au niveau du langage**, la
 distinction entre les deux deviendrait beaucoup plus claire, et la notion de
 `ByteArray` plus facile à expliquer et à justifier.
+
 <a id="no_change" ></a>
+# Et ce qui ne changerait pas
