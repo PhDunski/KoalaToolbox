@@ -182,6 +182,7 @@ CC foo.cpp main.cpp
 
 A mon sens, chacune des situations présentes mérite d'être désignée par un mot clé spécifique.
 
+<a id="semantics"></a>
 ### Différencier les sémantiques
 
 En forçant l'utilisateur à choisir un mot clé
@@ -218,7 +219,8 @@ et que l'autre
 - autorise le CRTP
 - utilise l'accessibilité **privé** par défaut car
   nous sommes face à un fournisseur de service avant tout
-<a id="ppc" />
+  
+<a id="ppc"></a>
 ### Meilleur support de la programmation par contrat
 
 Ce n'est un secret pour personne : je suis un ardent défenseur de
@@ -238,7 +240,8 @@ Une meilleure intégration de la programmation par contrat permettrait :
 - aux outils d'apporter plus facielement la preuve que le programme est
   correct
 - Sans doute bien d'autres choses encore
-<a id="conception" />
+
+<a id="conception"></a>
 ### Interdire les décisions conceptuelles aberrantes
 
 Un code porche de
@@ -269,7 +272,8 @@ par lui poser  problème.
 
 Certaines sont impossibles à empêcher, mais celles qui peuvent être interdites
 (comme le code que je présente) devraient l'être.
-<a id="compat" />
+
+<a id="compat"></a>
 ### Abandonner la compatibilité avec le C
 
 Pour des raisons historiques, C++ est "aussi compatible que faire se peut"
@@ -290,7 +294,8 @@ Je ne nie pas le fait que C est la `franqua linguae` des langages de
 programmation ni le fait que la capacité de profiter de bibliothèques
 écrites en C soit primordiale.  Mais lorsque l'on développe dans un langage
 donné, c'est ce langage qui doit être utilisé, à l'exception de tout autre.
-<a id="eval"/>
+
+<a id="eval"></a>
 ### Une définition plus précise de l'ordre d'évaluation
 
 En C++, un code proche de
@@ -316,12 +321,8 @@ Et bien sur, le résultat obtenu risque d'être fondamentalement différnt.
 Une meilleure définition de l'ordre d'évaluation des argument et des opérandes
 en tous genre faciliterait la vie du développeur, sans pour autant lui
 imposer de limites inutiles.
-<a id="no_change" />
-## Ce qui ne changera pas
 
-Pour faire simple : rien de ce qui est sans rapport avec les points cité
-plus haut ne devrait fondamentalement changer.
-
+<a id="char_byte"></a>
 ### Distinguer clairement le char du byte
 
 Je ne compte plus le nombre de fois où j'ai du expliquer la différence
@@ -341,6 +342,13 @@ Si la notion de *byte* (un ensemble de N bits successifs en mémoire) pouvait
 être décorellée de la notion de caractères **au niveau du langage**, la
 distinction entre les deux deviendrait beaucoup plus claire, et la notion de
 `ByteArray` plus facile à expliquer et à justifier.
+<a id="no_change" ></a>
+## Ce qui ne changera pas
+
+Pour faire simple : rien de ce qui est sans rapport avec les points cité
+plus haut ne devrait fondamentalement changer.
+
+
 
 ## Voir aussi
 
