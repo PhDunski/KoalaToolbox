@@ -2,70 +2,70 @@
 # Un autre langage de programmation
 
 Ce n'est un secret pour personne : de tous les langages de programmation
-que je connais, ma pr&eacute;f&eacute;rence va clairement au C++.
+que je connais, ma préférence va clairement au C++.
 
-Cette pr&eacute;f&eacute;rence est essentiellement due  la
-philosophie du langage dont on peut ais&eacute;ment tracer les grandes
+Cette préférence est essentiellement due  la
+philosophie du langage dont on peut aisément tracer les grandes
 lignes:
 
 - on ne paye le prix de ce que l'on utilise
-- on privil&eacute;gie l'utile au "s&eacute;curitaire"
+- on privilégie l'utile au "sécuritaire"
 - on ne se limite pas à un paradigme particulier
 <a id="why" />
 ## Pourquoi un nouveau langage?
 
 Vous auriez tout à fait raison de vous demander la raison qui me pousse
-à essayer de cr&eacute;er un nouveau langage.
+à essayer de créer un nouveau langage.
 
-Cette raison est finalement toute simple : malgr&eacute; les &eacute;normes qualit&eacute;s
-que je reconnais à C++, je lui trouve quelques d&eacute;fauts qui m&eacute;riteraient
--- selon moi -- d'être corrig&eacute;s.
+Cette raison est finalement toute simple : malgré les énormes qualités
+que je reconnais à C++, je lui trouve quelques défauts qui mériteraient
+-- selon moi -- d'être corrigés.
 
-Malheureusement, ces d&eacute;fauts font intrins&egrave;quement partie de son ADN,
+Malheureusement, ces défauts font intrinsèquement partie de son ADN,
 si bien qu'il serait difficiles de les corriger.
 
 Parmi les principaux, j'ai envie de citer :
 
 - la constance explicite
 - un système de déclaration des fonctionnalités archaïque
-- le sens ambigu du mot cl&eacute; `static`
-- la non diff&eacute;rentiation des s&eacute;mantiques
+- le sens ambigu du mot clé `static`
+- la non différentiation des sémantiques
 - une intégration imparfaite de la programmation par contrat
 - l'acceptation de décisions conceptuellement aberrantes
-- une trop grande compatibilit&eacute; avec C
+- une trop grande compatibilité avec C
 - l'ordre d'évaluation des arguments et des opérandes est mal défini
 - le manque de distinction entre un `char` et un `byte` (avant C++17)
 
-Ces quelques d&eacute;fauts rendent -- à mon humble avis -- C++ bien plus complexe
+Ces quelques défauts rendent -- à mon humble avis -- C++ bien plus complexe
 qu'il n'aurait pu l'être si il n'en avait pas souffert.
 
-Le but de ce projet est (d'essayer) de cr&eacute;er un langage qui aurait toute
-la puissance du C++ mais qui en r&eacute;soudrait les probl&egrave;mes les plus criants.
+Le but de ce projet est (d'essayer) de créer un langage qui aurait toute
+la puissance du C++ mais qui en résoudrait les problèmes les plus criants.
 <a id="changes" />
 ## Qu'est ce que cela changerait?
 
-Bien s&ucurcr, si m'autorise &agrave; consid&eacute;rer certains aspects
-d'un langage cr&eacute;&eacute; par quelqu'un de tr&egrave;s certainement
-plus intelligent et mieux form&eacute; que moi comme "probl&eacute;matique",
-c'est parce que je crois tr&egrave;s sinc&egrave;rement que
+Bien sûr, si m'autorise à considérer certains aspects
+d'un langage créé par quelqu'un de très certainement
+plus intelligent et mieux formé que moi comme "problématique",
+c'est parce que je crois très sincèrement que
 leur correction permettrait d'obtenir un langage tout aussi puissant, mais
-bien plus "s&eacute;curisant" à l'emploi.  Voici les raisons qui me poussent
+bien plus "sécurisant" à l'emploi.  Voici les raisons qui me poussent
 à le croire
 <a id="mutable"/>
-### La mutabilit&eacute; explicite
+### La mutabilité explicite
 
-Le fait que C++ consid&egrave;re les donn&eacute;es comme &eacute;tant
-mutables par d&eacute;faut favorise d'une certaine manière les effets de
-bord non d&eacute;sir&eacutes.
+Le fait que C++ considère les données comme étant
+mutables par défaut favorise d'une certaine manière les effets de
+bord non désirés.
 
-En effet, si l'on oublie de déclarer une variable ou un param&egrave;tre
-comme &eacute;tant constant, le compilateur ne verrra absolument aucune
+En effet, si l'on oublie de déclarer une variable ou un paramètre
+comme étant constant, le compilateur ne verrra absolument aucune
 objection au fait que l'on essaye de la modifier.
 
-En inversant les r&egrave;gles et en obligeant le d&eacute;velopeur &agrave;
-indiquer explicitement son souhait de pouvoir modifier une donn&eacute;
-on pourrait r&eacute;duire très fortement les erreurs d'attention, car
-le compilateur refuserait toute tentative de modification par d&eacute;faut.
+En inversant les règles et en obligeant le dévelopeur à
+indiquer explicitement son souhait de pouvoir modifier une donné
+on pourrait réduire très fortement les erreurs d'attention, car
+le compilateur refuserait toute tentative de modification par défaut.
 <a id="modules"/>
 ### utilisation de modules
 
@@ -75,13 +75,13 @@ dont il a besoin.
 
 L'utilisation de **modules** rendrait la compilation plus rapide
 <a id="static" />
-### le mot cl&eacute; `static`
+### le mot clé `static`
 
-En C++, le mot cl&eacute; `static` peut &ecirc;tre utilis&eacute; de trop
-nombreuses mani&ecirc;res, ce qui le rend particuli&eacute;rement ambigu.
+En C++, le mot clé `static` peut être utilisé de trop
+nombreuses maniêres, ce qui le rend particuliérement ambigu.
 
 Il est -- en effet -- possible de l'utiliser pour représenter une fonction
-ou une donn&eacute;e membre dans une classe (ou dans une structure), sous
+ou une donnée membre dans une classe (ou dans une structure), sous
 une forme proche de
 
 ```cpp
@@ -99,24 +99,24 @@ une forme proche de
 
 ```
 Dans cette circonstance, le mot clé indique que nous avons affaire à une
-fonction (ou &agrave; une donn&eacute;e) qui **fait partie int&eacute;grante
-de la classe** (ou de la structure), mais qui **ne d&eacute;pend d'aucune
+fonction (ou à une donnée) qui **fait partie intégrante
+de la classe** (ou de la structure), mais qui **ne dépend d'aucune
 instance** de celle-ci.
 
-Autrement dit, la donn&eacute;e ou la fonction est accessible (en fonction)
-de son accessibilit&eaucte;) m&ecirc;me s'il n'existe aucune instance du
-type de la structure ou de la classe; et, par voie de cons&eacute;quence,
+Autrement dit, la donnée ou la fonction est accessible (en fonction)
+de son accessibilité) même s'il n'existe aucune instance du
+type de la structure ou de la classe; et, par voie de conséquence,
 que toutes les instances de la classe (ou de la structure)partagent la
-m&ecirc;me valeur : si A de la classe modifie la valeur de la donn&eacute;,
-l'instance B de la classe utilisera la m&ecirc;me valeur que celle de A.
+même valeur : si A de la classe modifie la valeur de la donné,
+l'instance B de la classe utilisera la même valeur que celle de A.
 
-Nous pourrions dire qu'il s'agit de donn&eacute;e (ou de fonction) de type,
-par opposition aux donn&eacute;es et aux fonctions d'instance, qui ne sont
-accessible qu'au d&eacute;part d'une instance existante et bien particuli&egrave;re
+Nous pourrions dire qu'il s'agit de donnée (ou de fonction) de type,
+par opposition aux données et aux fonctions d'instance, qui ne sont
+accessible qu'au départ d'une instance existante et bien particulière
 de la classe (ou de la structure)
 
-D'un autre cot&eacute;, le mot cl&eacute; `static` peut d&eacute;signer une
-donn&eacute;e au sein d'une fonction dont la valeur est r&eacute;utilis&eacute;e
+D'un autre coté, le mot clé `static` peut désigner une
+donnée au sein d'une fonction dont la valeur est réutilisée
 d'une exécution de la fonction à l'autre, un code proche de
 
 ```C++
@@ -145,9 +145,9 @@ produisant la sortie
     5
 ```
 
-Enfin, le mot cl&eacute; `static` signifie, quand il est utilis&eacute;
-pour d&eacute;signer une fonction libre, que la fonction n'est accessible
-que dans l'unit&eacute; de compilation dans laquelle elle est définie.
+Enfin, le mot clé `static` signifie, quand il est utilisé
+pour désigner une fonction libre, que la fonction n'est accessible
+que dans l'unité de compilation dans laquelle elle est définie.
 
 Ainsi, avec un code proche prenant la forme de
 
@@ -175,60 +175,60 @@ CC foo.cpp main.cpp
 
 ```
 
-&eacute;chouera &agrave; l'&eacutedition de liens sous pr&eacute;texte
-d'une r&eacute;f&eacute;rence ind&eacute;finie vers "foo()".
+échouera à l'édition de liens sous prétexte
+d'une référence indéfinie vers "foo()".
 
-&Agrave; mon sens, chacune des situations pr&eacute;sentes m&eacute;rite
-d'&ecirc;tre d&eacute;sign&eacute;e par un mot cl&eacute; sp&eacutecifique.
+à mon sens, chacune des situations présentes mérite
+d'être désignée par un mot clé spécifique.
 <a id="semantic" />
-### Diff&eacute;rencier les s&eacute;mantiques
+### Différencier les sémantiques
 
-En for&ccedil;ant l'utilisateur &agrave; choisir un mot cl&eacute;
-diff&eacute;rent pour ses agr&eacute;gats de donn&eacute;es en fonction
-de la s&eacute;mentique qu'il souhaite lui donner, on le forcerait &agrave;
-se poser la question de la s&eacute;mantique avant de faire quoi que ce
+En forçant l'utilisateur à choisir un mot clé
+différent pour ses agrégats de données en fonction
+de la sémentique qu'il souhaite lui donner, on le forcerait à
+se poser la question de la sémantique avant de faire quoi que ce
 soit.
 
-Bien s&ucirc;r, cela ne l'emp&ecirc;cherait pas de faire un choix inadap&eacute;
-(comme : d&eacute;cider de donner une s&eacute;mantique de valeur au type
-`Vehicle` ou une s&eacute;mantique d'enti&eacute au type `Color`) mais
+Bien sûr, cela ne l'empêcherait pas de faire un choix inadapé
+(comme : décider de donner une sémantique de valeur au type
+`Vehicle` ou une sémantique d'enti& au type `Color`) mais
 cela l'obligerait à se poser la question.
 
-De plus, en ayant deux mots cl&eaucte; distincts; il devient tout &agrave;
+De plus, en ayant deux mots clé distincts; il devient tout à
 fait possible de faire en sorte que l'un
 
-- implémente automatiquement un constructeur de copie, un op&eacute;rateur
-  d'affectation et un comparateur d'&eacute;galité
-- refuse l'h&eacute;ritage **public** qui est l'apanage de la s&eacute;mantique
-  d'entit&eacute;
-- autorise l'h&eacute;ritage priv&eacute;, qui n'a rien à voir avec le LSP
+- implémente automatiquement un constructeur de copie, un opérateur
+  d'affectation et un comparateur d'égalité
+- refuse l'héritage **public** qui est l'apanage de la sémantique
+  d'entité
+- autorise l'héritage privé, qui n'a rien à voir avec le LSP
 - autorise le CRTP, vu que ce n'est pas de l'héritage au sens du LSP
-- utilise l'accessibilité **publique** par d&eacute;faut, vu que chaque
-  donn&eacute;e de l'agr&eacute;gat est -- par nature --
-  un &eacute;l&eacutement auquel nous voudrions acc&eacute;der.
+- utilise l'accessibilité **publique** par défaut, vu que chaque
+  donnée de l'agrégat est -- par nature --
+  un élément auquel nous voudrions accéder.
 
 et que l'autre
 
-- interdise formellement la cr&eacute;ation d'un constructeur de copie, d'u
-  op&eacute;rateur d'affectation et de n'importe quel op&eacute;rateur de
+- interdise formellement la création d'un constructeur de copie, d'u
+  opérateur d'affectation et de n'importe quel opérateur de
   comparaison
-- autorise l'h&eacute;ritage **public**
-- autorise l'h&eacute;ritage priv&eacute;
+- autorise l'héritage **public**
+- autorise l'héritage privé
 - autorise le CRTP
-- utilise l'accessibilit&eacute; **priv&eacute;** par d&eacute;faut car
-  nous sommes face &agrave; un fournisseur de service avant tout
+- utilise l'accessibilité **privé** par défaut car
+  nous sommes face à un fournisseur de service avant tout
 <a id="ppc" />
 ### Meilleur support de la programmation par contrat
 
-Ce n'est un secret pour personne : je suis un ardent d&eacute;fenseur de
+Ce n'est un secret pour personne : je suis un ardent défenseur de
 ce que l'on appelle couremment la *programmation par contrat*.
 
 Bien que j'aie tendance à la favoriser par rapport à la *programmation
-d&eacute;fensive*, il n'est pas dans mes intentions de mettre ces deux
-approche en comp&eacutetition, car chacune d'elle pr&eacute;sente des avantages.
+défensive*, il n'est pas dans mes intentions de mettre ces deux
+approche en compétition, car chacune d'elle présente des avantages.
 
 Cependant, force est de constater que la programmation par contrat est
-finalement très mal int&eacute;gr&eacute;e en C++ :
+finalement très mal intégrée en C++ :
 
 Une meilleure intégration de la programmation par contrat permettrait :
 - au compilateur de vérifier certains éléments à la compilation
