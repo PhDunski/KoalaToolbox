@@ -352,7 +352,7 @@ plus haut ne devrait fondamentalement changer.
 
 ## Voir aussi
 
-- [la description de base](description#top)
-- [les fonctionnalités du langage](fonctionnalities#top)
-- [les mots clés du langage](keywords#top)
-- [La syntaxe du langage](grammar#top)
+- [la description de base](description.md#top)
+- [les fonctionnalités du langage](fonctionnalities.md#top)
+- [les mots clés du langage](keywords.md#top)
+- [La syntaxe du langage](grammar.md#top)
