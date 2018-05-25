@@ -1,4 +1,4 @@
-<a id="top" />
+<a id="top"></a>
 # Un autre langage de programmation
 
 Ce n'est un secret pour personne : de tous les langages de programmation
@@ -11,7 +11,8 @@ lignes:
 - on ne paye le prix de ce que l'on utilise
 - on privilégie l'utile au "sécuritaire"
 - on ne se limite pas à un paradigme particulier
-<a id="why" />
+
+<a id="why" ></a>
 ## Pourquoi un nouveau langage?
 
 Vous auriez tout à fait raison de vous demander la raison qui me pousse
@@ -41,7 +42,7 @@ qu'il n'aurait pu l'être si il n'en avait pas souffert.
 
 Le but de ce projet est (d'essayer) de créer un langage qui aurait toute
 la puissance du C++ mais qui en résoudrait les problèmes les plus criants.
-<a id="changes" />
+<a id="changes" > </a>
 ## Qu'est ce que cela changerait?
 
 Bien sûr, si m'autorise à considérer certains aspects
@@ -51,7 +52,8 @@ c'est parce que je crois très sincèrement que
 leur correction permettrait d'obtenir un langage tout aussi puissant, mais
 bien plus "sécurisant" à l'emploi.  Voici les raisons qui me poussent
 à le croire
-<a id="mutable"/>
+
+<a id="mutable"></a>
 ### La mutabilité explicite
 
 Le fait que C++ considère les données comme étant
@@ -66,7 +68,8 @@ En inversant les règles et en obligeant le dévelopeur à
 indiquer explicitement son souhait de pouvoir modifier une donné
 on pourrait réduire très fortement les erreurs d'attention, car
 le compilateur refuserait toute tentative de modification par défaut.
-<a id="modules"/>
+
+<a id="modules"></a>
 ### utilisation de modules
 
 C++ utilise la directive du préprocesseur `#include <filename>` pour permettre
@@ -74,7 +77,7 @@ au compilateur de connaitre les éléments externes à l'unité de compilation
 dont il a besoin.
 
 L'utilisation de **modules** rendrait la compilation plus rapide
-<a id="static" />
+<a id="static" ></a>
 ### le mot clé `static`
 
 En C++, le mot clé `static` peut être utilisé de trop
@@ -151,7 +154,7 @@ que dans l'unité de compilation dans laquelle elle est définie.
 
 Ainsi, avec un code proche prenant la forme de
 
-~~~C++
+```C++
 
     // Dans foo.cpp
     static void foo(){
@@ -169,13 +172,13 @@ Ainsi, avec un code proche prenant la forme de
 
 la commande
 
-```Bash
+```bash
 
 CC foo.cpp main.cpp
 
 ```
 
-échouera à l'édition de liens sous prétexte d'une référence indéfinie vers "foo()".
+échouera à l'édition de liens sous prétexte d'une référence indéfinie vers `foo()`.
 
 A mon sens, chacune des situations présentes mérite d'être désignée par un mot clé spécifique.
 
