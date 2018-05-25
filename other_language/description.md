@@ -1,5 +1,5 @@
-<a  id="top" />
-#Description
+<a  id="top" ></a>
+# Description
 
 Ce langage sera un langage de programmation **multi paradigme**,
 **compilé** d'usage général, **n'ayant pas recours à une machine virtuelle**,
@@ -9,7 +9,7 @@ type "serveur" que sur les dispositifs personnels
 (tels que pc, smartphones, ...)
 
 
-<a id="paradigms" />
+<a id="paradigms" ></a>
 ## Un langage "multi paradigme"
 
 Tout comme C++, ce langage supportera au minimum trois paradigmes:
@@ -21,7 +21,7 @@ Tout comme C++, ce langage supportera au minimum trois paradigmes:
 s'il est possible de l'intégrer de manière homogène, le support du paradigme
 **fonctionnel** peut être envisagé.
 
-<a id="specifics" />
+<a id="specifics" ></a>
 ## Usage spécifiques envisageables
 
 S'il est possible de les mettre en place, certains usages spécifiques pourront
