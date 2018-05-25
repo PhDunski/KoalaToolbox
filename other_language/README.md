@@ -180,7 +180,7 @@ CC foo.cpp main.cpp
 A mon sens, chacune des situations présentes mérite d'être désignée par
 un mot clé spécifique.
 
-<a id="semantic" />
+
 ### Différencier les sémantiques
 
 En forçant l'utilisateur à choisir un mot clé
